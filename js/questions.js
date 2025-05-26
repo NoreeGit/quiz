@@ -7,7 +7,8 @@ const questions = [
       { text: "Rome", correct: false },
       { text: "Berlin", correct: false }
     ]
-  },
+    image: "https://pixabay.com/photos/eiffel-tower-landscape-europe-paris-803488/"
+},
   {
     question: "Which planet is known as the Red Planet?",
     answers: [
