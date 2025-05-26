@@ -1,4 +1,3 @@
-// questions.js with image references/* js/questions.js */
 const questions = [
   {
     question: "What is the capital of France?",
@@ -271,5 +270,28 @@ const questions = [
       { text: "John Glenn", correct: false }
     ]
   }
-
+  {
+    type: "multiple",
+    question: "What is the capital of France?",
+    answers: [
+      { text: "Paris", correct: true },
+      { text: "Madrid", correct: false },
+      { text: "Rome", correct: false },
+      { text: "Berlin", correct: false }
+    ],
+    image: "images/q1.jpg"
+  },
+  {
+    type: "truefalse",
+    question: "The Earth is flat.",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true }
+    ]
+  },
+  {
+    type: "text",
+    question: "What is the chemical symbol for water?",
+    correctAnswer: "H2O"
+  }
 ];
