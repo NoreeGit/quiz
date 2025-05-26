@@ -12,6 +12,7 @@ questionContainer.before(scoreDisplay); // insert above question container
 
 function startQuiz() {
   questions.sort(() => Math.random() - 0.5);
+  questions.splice(5); // Keep only the first 5 questions
   currentQuestionIndex = 0;
   score = 0;
   showQuestion();
