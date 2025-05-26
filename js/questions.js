@@ -269,6 +269,6 @@ const questions = [
       { text: "Yuri Gagarin", correct: false },
       { text: "John Glenn", correct: false }
     ]
-  },
+  }
   
 ];
