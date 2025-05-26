@@ -269,29 +269,28 @@ const questions = [
       { text: "Yuri Gagarin", correct: false },
       { text: "John Glenn", correct: false }
     ]
-  }
-  {
-    type: "multiple",
-    question: "What is the capital of France?",
-    answers: [
-      { text: "Paris", correct: true },
-      { text: "Madrid", correct: false },
-      { text: "Rome", correct: false },
-      { text: "Berlin", correct: false }
-    ],
-    image: "images/q1.jpg"
   },
   {
-    type: "truefalse",
-    question: "The Earth is flat.",
-    answers: [
-      { text: "True", correct: false },
-      { text: "False", correct: true }
-    ]
-  },
-  {
-    type: "text",
-    question: "What is the chemical symbol for water?",
-    correctAnswer: "H2O"
-  }
+  type: "multiple",
+  question: "What is the capital of Italy?",
+  answers: [
+    { text: "Rome", correct: true },
+    { text: "Milan", correct: false },
+    { text: "Naples", correct: false },
+    { text: "Venice", correct: false }
+  ]
+},
+{
+  type: "truefalse",
+  question: "The Earth is flat.",
+  answers: [
+    { text: "True", correct: false },
+    { text: "False", correct: true }
+  ]
+},
+{
+  type: "text",
+  question: "What is the chemical symbol for water?",
+  correctAnswer: "H2O"
+}  
 ];
