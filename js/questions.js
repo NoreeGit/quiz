@@ -9,7 +9,7 @@ const questions = [
     ]
 },
   {
-    question: "Which planet is known as the Red Planet?",
+   question: "Which planet is known as the Red Planet?",
     answers: [
       { text: "Mars", correct: true },
       { text: "Venus", correct: false },
