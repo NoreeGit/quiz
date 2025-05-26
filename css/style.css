@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #1e1e1e; /* dark grey */
-  color: #ffffff; /* white */
+  background-color: #1e1e1e; 
+  color: #ffffff; 
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -12,7 +12,7 @@ main {
   animation: fadeIn 0.8s ease;
 }
 button {
-  background-color: #ff8800; /* orange */
+  background-color: #ff8800; 
   color: white;
   padding: 0.75em 1.5em;
   margin: 1em;
@@ -23,7 +23,7 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 button:hover {
-  background-color: #cc6e00; /* darker orange */
+  background-color: #cc6e00; 
   transform: scale(1.05);
 }
 .btn-grid {
