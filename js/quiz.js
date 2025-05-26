@@ -1,4 +1,3 @@
-// quiz.js content/* js/quiz.js */
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -7,6 +6,7 @@ const answerButtons = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
 
 function startQuiz() {
+  questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   score = 0;
   showQuestion();
@@ -20,13 +20,28 @@ function showQuestion() {
   questionContainer.innerHTML = '';
   questionContainer.appendChild(questionElement);
 
-  question.answers.forEach(answer => {
-    const button = document.createElement('button');
-    button.innerText = answer.text;
-    button.classList.add('btn');
-    button.addEventListener('click', () => selectAnswer(answer));
-    answerButtons.appendChild(button);
-  });
+  if (question.image) {
+    const imageElement = document.createElement('img');
+    imageElement.src = question.image;
+    imageElement.alt = "Question image";
+    questionContainer.appendChild(imageElement);
+  }
+
+  if (question.type === "text") {
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'text-answer';
+    input.placeholder = 'Type your answer here...';
+    answerButtons.appendChild(input);
+  } else {
+    question.answers.forEach(answer => {
+      const button = document.createElement('button');
+      button.innerText = answer.text;
+      button.classList.add('btn');
+      button.addEventListener('click', () => selectAnswer(answer));
+      answerButtons.appendChild(button);
+    });
+  }
 }
 
 function resetState() {
@@ -42,6 +57,15 @@ function selectAnswer(answer) {
 }
 
 nextButton.addEventListener('click', () => {
+  const currentQuestion = questions[currentQuestionIndex];
+  if (currentQuestion.type === "text") {
+    const userInput = document.getElementById('text-answer').value.trim().toLowerCase();
+    const correctAnswer = currentQuestion.correctAnswer.trim().toLowerCase();
+    if (userInput === correctAnswer) {
+      score++;
+    }
+  }
+
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
